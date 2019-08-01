@@ -1,0 +1,35 @@
+添加nvidia驱动ppa
+sudo add-apt-repository ppa:graphics-drivers/ppa
+sudo apt-get update
+软件更新/附加驱动
+选择410-cuda10.0 应用更改
+
+安装CUDA
+sudo sh cuda_10.0.130_410.48_linux.run
+sudo gedit ~/.bashrc
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-9.0/lib64
+export PATH=$PATH:/usr/local/cuda-9.0/bin
+export CUDA_HOME=$CUDA_HOME:/usr/local/cuda-9.0
+
+安装cudnn
+sudo cp cuda/include/cudnn.h /usr/local/cuda/include
+sudo cp cuda/lib64/libcudnn* /usr/local/cuda/lib64
+sudo chmod a+r /usr/local/cuda/include/cudnn.h
+sudo chmod a+r /usr/local/cuda/lib64/libcudnn*
+
+anaconda权限
+sudo chmod -R 777 anaconda3 给予全部的权限
+
+
+安装git
+sudo apt-get update -y
+sudo apt-get upgrade -y
+sudo apt install git
+git config --global user.name "zhan_Linux"
+git config --global user.email "zhanli@siom.ac.cn"
+ssh-keygen -t rsa -C "zhanli@siom.ac.cn"
+gedit ~/.ssh/id_rsa.pub
+复制ssh到github
+ssh -T git@github.com
+
+
