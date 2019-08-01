@@ -32,4 +32,36 @@ gedit ~/.ssh/id_rsa.pub
 复制ssh到github
 ssh -T git@github.com
 
-
+vscode 设置
+seeting.json
+{
+    "workbench.iconTheme": "vscode-icons",
+    "sync.gist": "6b6f3e13e9b81b57dee1ff5af581444f",
+    "workbench.colorTheme": "One Dark Pro",
+    "python.pythonPath": "/home/lizhan306/anaconda3/bin/python",
+    "python.linting.pylintEnabled": false,
+    "python.linting.flake8Enabled": true,
+    "python.formatting.provider": "yapf",
+    "files.insertFinalNewline": true,
+    "editor.fontSize": 18,
+    "files.autoSave": "onFocusChange"
+}
+安装插件Settings Sync
+指定运行环境 Ctrl+Shift+P ->Python:Select Interpreter
+launch.json
+{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: 当前文件",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "stopOnEntry": true
+        }
+    ]
+}
