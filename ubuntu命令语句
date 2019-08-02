@@ -18,7 +18,9 @@ sudo chmod a+r /usr/local/cuda/include/cudnn.h
 sudo chmod a+r /usr/local/cuda/lib64/libcudnn*
 
 anaconda权限
-sudo chmod -R 777 anaconda3 给予全部的权限
+sudo chmod -R 777 anaconda3 #给予全部的权限
+conda create --name pytorh0.40  python=3.6.8
+source activate pytorh0.40   #激活环境
 
 
 安装git
